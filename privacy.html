@@ -14,30 +14,31 @@
         }
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.8; 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 40px 20px; 
             color: var(--text-color);
             background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
         }
-        .container {
+        .privacy-content {
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         h1 { 
             color: var(--primary-color); 
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 10px;
             text-align: center;
+            font-weight: 700;
         }
         h2 { 
             color: #34495e; 
             margin-top: 30px;
             display: flex;
             align-items: center;
+            font-weight: 600;
+            font-size: 1.5rem;
         }
         h2::before {
             content: "•";
@@ -45,7 +46,7 @@
             margin-right: 10px;
             font-size: 1.5em;
         }
-        p, li { font-size: 1.1em; color: #555; }
+        p, li { font-size: 1.1em; color: #555; line-height: 1.8; }
         .update-date { 
             text-align: center; 
             font-style: italic; 
@@ -54,72 +55,87 @@
         }
         .contact-box {
             background: #eef2f7;
-            padding: 20px;
+            padding: 24px;
             border-left: 5px solid var(--primary-color);
             margin-top: 40px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 0.9em;
-            color: #aaa;
+            border-radius: 0 8px 8px 0;
         }
     </style>
 </head>
-<body>
-  <nav class="bg-white shadow-sm sticky top-0 z-50">
+<body class="bg-gray-50">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <span href="index.html" class="text-xl font-bold text-blue-600">Mehmet Vehbi Demir</span>
+            <span class="text-xl font-bold text-blue-600">Mehmet Vedat Demir</span> 
             <div class="space-x-6">
-                <a href="index.html" class="text-gray-500 hover:text-blue-600">Ana Sayfa</a>
+                <a href="index.html" class="text-gray-500 hover:text-blue-600 transition font-medium">Ana Sayfa</a>
             </div>
         </div>
     </nav>
-<div class="container">
-    <h1>İyi Ki - Gizlilik Politikası</h1>
-    <p class="update-date">Son Güncelleme: 26 Ocak 2026</p>
-    
-    <p><strong>İyi Ki</strong> ("biz", "uygulama"), kullanıcılarımızın gizliliğine ve verilerinin güvenliğine sarsılmaz bir bağlılık duymaktadır. Bu Gizlilik Politikası, mobil uygulamamızı kullandığınızda verilerinizin nasıl toplandığını, saklandığını ve korunduğunu ayrıntılı olarak açıklar.</p>
 
-    <h2>1. Toplanan Bilgiler</h2>
-    <p>Uygulamamızın temel amacı doğum günlerini takip etmek ve size hatırlatıcılar sunmaktır. Bu bağlamda sadece aşağıdaki verileri işleriz:</p>
-    <ul>
-        <li><strong>Kullanıcı Tarafından Sağlanan Veriler:</strong> Uygulama içine manuel olarak kaydettiğiniz ad, soyad ve doğum tarihi bilgileri.</li>
-        <li><strong>Log Verileri:</strong> Uygulama çökmesi durumunda anonim olarak toplanan teknik hata raporları.</li>
-    </ul>
+    <main class="max-w-5xl mx-auto px-4 py-12">
+        <div class="privacy-content">
+            <h1>İyi Ki - Gizlilik Politikası</h1>
+            <p class="update-date">Son Güncelleme: 11 Şubat 2026</p>
+            
+            <p class="mb-6 text-center text-gray-700">
+                <strong>İyi Ki</strong> ("biz", "uygulama"), kullanıcılarımızın gizliliğine ve verilerinin güvenliğine sarsılmaz bir bağlılık duymaktadır.
+            </p>
 
-    <h2>2. Verilerin İşlenme Amacı</h2>
-    <p>Topladığımız kısıtlı veriler yalnızca şu amaçlar için kullanılır:</p>
-    <ul>
-        <li>Yaklaşan doğum günlerini cihazınızda yerel bildirimler aracılığıyla size hatırlatmak.</li>
-        <li>Uygulamanın performansını optimize etmek ve teknik hataları gidermek.</li>
-    </ul>
+            <section class="mb-8">
+                <h2>1. Toplanan Bilgiler</h2>
+                <p>Uygulamamızın temel amacı doğum günlerini takip etmektir. Sadece aşağıdaki verileri işleriz:</p>
+                <ul class="list-disc ml-8 mt-2 space-y-2">
+                    <li><strong>Kullanıcı Tarafından Sağlanan Veriler:</strong> Uygulama içine manuel olarak kaydettiğiniz ad, soyad ve doğum tarihi bilgileri.</li>
+                    <li><strong>Log Verileri:</strong> Uygulama çökmesi durumunda anonim teknik hata raporları.</li>
+                </ul>
+            </section>
 
-    <h2>3. Veri Saklama ve Güvenlik (Siber Güvenlik Beyanı)</h2>
-    <p>Bir geliştirici olarak siber güvenlik prensiplerini ("Security by Design") benimsiyoruz:</p>
-    <ul>
-        <li><strong>Yerel Depolama:</strong> Girdiğiniz tüm veriler sadece cihazınızın güvenli depolama alanında tutulur.</li>
-        <li><strong>Bulut Aktarımı Yok:</strong> Verileriniz hiçbir uzak sunucuya (Cloud) gönderilmez ve internet üzerinden paylaşılmaz.</li>
-        <li><strong>Erişim Kontrolü:</strong> Uygulama, işlevini yerine getirmek için gerekmeyen hiçbir sistem iznini (Rehber, Konum, Kamera vb.) talep etmez.</li>
-    </ul>
+            <section class="mb-8">
+                <h2>2. Verilerin İşlenme Amacı</h2>
+                <p>Topladığımız kısıtlı veriler yalnızca şu amaçlar için kullanılır:</p>
+                <ul class="list-disc ml-8 mt-2 space-y-2">
+                    <li>Cihazınızda yerel bildirimler aracılığıyla doğum günlerini hatırlatmak.</li>
+                    <li>Uygulama performansını optimize etmek.</li>
+                </ul>
+            </section>
 
-    <h2>4. Üçüncü Taraf Paylaşımı</h2>
-    <p>Verileriniz hiçbir şart altında üçüncü şahıslara satılmaz, kiralanmaz veya ticari amaçla paylaşılmaz. Uygulama içinde reklam hizmetleri (AdMob gibi) kullanılması durumunda, bu servisler sadece anonim reklam kimliklerini kullanır.</p>
+            <section class="mb-8">
+                <h2>3. Veri Saklama ve Güvenlik</h2>
+                <p>Bir geliştirici olarak siber güvenlik prensiplerini ("Security by Design") benimsiyoruz:</p>
+                <ul class="list-disc ml-8 mt-2 space-y-2">
+                    <li><strong>Yerel Depolama:</strong> Veriler sadece cihazınızın güvenli depolama alanında tutulur.</li>
+                    <li><strong>Bulut Aktarımı Yok:</strong> Verileriniz hiçbir uzak sunucuya (Cloud) gönderilmez.</li>
+                    <li><strong>Erişim Kontrolü:</strong> Uygulama, gereksiz sistem izinlerini (Konum, Kamera vb.) talep etmez.</li>
+                </ul>
+            </section>
 
-    <h2>5. Kullanıcı Hakları</h2>
-    <p>Verileriniz üzerinde tam kontrole sahipsiniz. Uygulama içerisinden kayıtları silebilir veya uygulamayı tamamen kaldırarak tüm verilerin cihazdan kalıcı olarak silinmesini sağlayabilirsiniz.</p>
+            <section class="mb-8">
+                <h2>4. Üçüncü Taraf Paylaşımı</h2>
+                <p>Verileriniz hiçbir şart altında üçüncü şahıslara satılmaz veya ticari amaçla paylaşılmaz.</p>
+            </section>
 
-    <div class="contact-box">
-        <h2>6. İletişim</h2>
-        <p>Gizlilik politikamız veya veri güvenliği hakkındaki sorularınız için bizimle iletişime geçebilirsiniz:</p>
-        <p><strong>E-posta:</strong> mehvehdem@gmail.com <br> 
-        <strong>GitHub:</strong> <a href="https://github.com/VehbiBey" target="_blank">@VehbiBey</a></p>
-    </div>
-</div>
+            <section class="mb-8">
+                <h2>5. Kullanıcı Hakları</h2>
+                <p>Verileriniz üzerinde tam kontrole sahipsiniz. Uygulamayı kaldırarak tüm verilerin cihazdan kalıcı olarak silinmesini sağlayabilirsiniz.</p>
+            </section>
 
-<footer>
-    &copy; 2026 İyi Ki App. Tüm hakları saklıdır.
-</footer>
+            <div class="contact-box">
+                <h2 class="mt-0">6. İletişim</h2>
+                <p>Sorularınız için bizimle iletişime geçebilirsiniz:</p>
+                <p class="mt-2 text-blue-600 font-medium">
+                    <i class="fas fa-envelope mr-2"></i>mehvehdem@gmail.com
+                </p>
+                <p class="mt-1 text-gray-700">
+                    <i class="fab fa-github mr-2"></i><a href="https://github.com/VehbiBey" target="_blank" class="hover:underline">@VehbiBey</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 text-center text-gray-400 text-sm">
+        &copy; 2026 İyi Ki App. Tüm hakları saklıdır.
+    </footer>
 
 </body>
 </html>
